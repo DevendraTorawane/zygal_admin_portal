@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-22T13:01:30 IST" name="Default suite" finished-at="2025-03-22T13:01:35 IST" duration-ms="5042">
+  <suite started-at="2025-03-25T18:34:22 IST" name="Default suite" finished-at="2025-03-25T18:34:28 IST" duration-ms="6539">
     <groups>
     </groups>
-    <test started-at="2025-03-22T13:01:30 IST" name="Default test" finished-at="2025-03-22T13:01:35 IST" duration-ms="5042">
+    <test started-at="2025-03-25T18:34:22 IST" name="Default test" finished-at="2025-03-25T18:34:28 IST" duration-ms="6539">
       <class name="Test.loginPageTest">
-        <test-method is-config="true" signature="browserLaunch()[pri:0, instance:Test.loginPageTest@77f1baf5]" started-at="2025-03-22T13:01:30 IST" name="browserLaunch" finished-at="2025-03-22T13:01:33 IST" duration-ms="2390" status="PASS">
+        <test-method is-config="true" signature="browserLaunch()[pri:0, instance:Test.loginPageTest@77f1baf5]" started-at="2025-03-25T18:34:22 IST" name="browserLaunch" finished-at="2025-03-25T18:34:25 IST" duration-ms="2993" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserLaunch -->
-        <test-method signature="loginWithValidCredentialsTest()[pri:0, instance:Test.loginPageTest@77f1baf5]" started-at="2025-03-22T13:01:33 IST" name="loginWithValidCredentialsTest" description="User Login with Valid Credentials" finished-at="2025-03-22T13:01:35 IST" duration-ms="2609" status="PASS">
+        <test-method signature="loginWithValidCredentialsTest()[pri:0, instance:Test.loginPageTest@77f1baf5]" started-at="2025-03-25T18:34:25 IST" name="loginWithValidCredentialsTest" description="User Login with Valid Credentials" finished-at="2025-03-25T18:34:28 IST" duration-ms="3505" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithValidCredentialsTest -->

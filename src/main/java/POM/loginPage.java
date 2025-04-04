@@ -43,8 +43,8 @@ public class loginPage {
 	}
 
 	public void enterCaptcha() {
-		String captchaBypassToken = ConfigReader.getProperty("captcha_token");
-		captcha.sendKeys(captchaBypassToken);
+		String captchaKey = ConfigReader.getProperty("captcha");
+		captcha.sendKeys(captchaKey);
 	}
 
 	public void ClickOnSubmit() {
