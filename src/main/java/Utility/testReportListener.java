@@ -10,7 +10,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Date;
-
+ // Implements TestNG listeners for customized reports/logging.
 public class testReportListener implements ITestListener {
     private static final String FILE_PATH = "test-output/TestReport.xlsx";
     private static Workbook workbook = new XSSFWorkbook();

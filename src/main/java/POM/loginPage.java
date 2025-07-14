@@ -11,6 +11,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import Config.ConfigReader;
 
+
+ // Contains web elements and methods related to the login page.
 public class loginPage {
 	private WebDriver driver;
 

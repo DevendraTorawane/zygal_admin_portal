@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import Config.ConfigReader;
 import io.github.bonigarcia.wdm.WebDriverManager;
-
+   //Handles WebDriver initialization, browser setup.
 public class browserLaunch {
 	public static WebDriver openBrowser() {
 		

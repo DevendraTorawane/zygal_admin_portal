@@ -4,6 +4,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+	//  Reads values from the config.properties file (e.g., URL, browser type).
+
 public class ConfigReader {
     private static Properties properties;
 
