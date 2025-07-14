@@ -10,6 +10,7 @@ import Config.ConfigReader;
 import POM.loginPage;
 import Utility.parameterization;
 
+  //Test cases related to login functionality.
 public class loginPageTest extends baseTest {
 
 	@BeforeMethod
