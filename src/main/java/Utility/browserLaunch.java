@@ -9,7 +9,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
    //Handles WebDriver initialization, browser setup.
 public class browserLaunch {
 	public static WebDriver openBrowser() {
-		
+
 		// Disable browser notifications
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications");

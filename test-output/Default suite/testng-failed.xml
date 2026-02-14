@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Test.loginPageTest">
+      <class name="Test.groupPageTest">
         <methods>
-          <include name="browserLaunch"/>
-          <include name="loginWithValidCredentialsTest"/>
+          <include name="setUp"/>
+          <include name="loginWithValidCredentialsTest" invocation-numbers="0"/>
+          <include name="addGroups"/>
         </methods>
-      </class> <!-- Test.loginPageTest -->
+      </class> <!-- Test.groupPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
