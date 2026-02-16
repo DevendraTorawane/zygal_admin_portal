@@ -15,10 +15,11 @@ public class groupPageTest extends baseTest
 
 	    zygalLoginPage.loginApplication(userName, password);
 	    // Add assertion to verify login success
+	    System.out.println("for git hub assertion to verify login success");
 	    Assert.assertTrue(zygalLoginPage.isLoginSuccessful(), "Login failed");
 
 
-//	    System.out.println("$$$$$$$$$$$$$$$$$$$");
+
 	}
 
 	@Test (dependsOnMethods="loginWithValidCredentialsTest", description="Verify Add Groups Functionality", groups= {"Smoke"})
@@ -26,9 +27,9 @@ public class groupPageTest extends baseTest
 	{
 		  GroupsAddGroups addgroups=new GroupsAddGroups(driver);
 
-		  addgroups.add300GroupsFromExcel();
+		//  addgroups.add300GroupsFromExcel();
 		  addgroups.MoveTilladdGroup();
-		//  addgroups.selectFirstDeviceGroupAndDevice();
+		  addgroups.selectFirstDeviceGroupAndDevice();
 
 		  Assert.assertTrue(true, "Groups added successfully");
 	}
