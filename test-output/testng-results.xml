@@ -1,140 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="0" failed="1" skipped="1">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-12T16:04:09 IST" name="Default suite" finished-at="2026-02-12T16:04:29 IST" duration-ms="20094">
+  <suite started-at="2026-03-04T19:23:45 IST" name="Default suite" finished-at="2026-03-04T19:24:29 IST" duration-ms="43453">
     <groups>
       <group name="Smoke">
-        <method signature="groupPageTest.loginWithValidCredentialsTest(java.lang.String,java.lang.String)[pri:0, instance:Test.groupPageTest@784c3487]" name="loginWithValidCredentialsTest" class="Test.groupPageTest"/>
-        <method signature="groupPageTest.addGroups()[pri:0, instance:Test.groupPageTest@784c3487]" name="addGroups" class="Test.groupPageTest"/>
+        <method signature="groupPageTest.loginWithValidCredentialsTest(java.lang.String,java.lang.String)[pri:0, instance:Test.groupPageTest@7966baa7]" name="loginWithValidCredentialsTest" class="Test.groupPageTest"/>
+        <method signature="groupPageTest.addSingleGroupTest()[pri:0, instance:Test.groupPageTest@7966baa7]" name="addSingleGroupTest" class="Test.groupPageTest"/>
+        <method signature="groupPageTest.deleteGroups()[pri:0, instance:Test.groupPageTest@7966baa7]" name="deleteGroups" class="Test.groupPageTest"/>
       </group> <!-- Smoke -->
     </groups>
-    <test started-at="2026-02-12T16:04:09 IST" name="Default test" finished-at="2026-02-12T16:04:29 IST" duration-ms="20094">
+    <test started-at="2026-03-04T19:23:45 IST" name="Default test" finished-at="2026-03-04T19:24:29 IST" duration-ms="43453">
       <class name="Test.groupPageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Test.groupPageTest@784c3487]" started-at="2026-02-12T16:04:09 IST" name="setUp" finished-at="2026-02-12T16:04:12 IST" duration-ms="2796" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Test.groupPageTest@7966baa7]" started-at="2026-03-04T19:23:46 IST" name="setUp" finished-at="2026-03-04T19:23:48 IST" duration-ms="2774" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginWithValidCredentialsTest(java.lang.String,java.lang.String)[pri:0, instance:Test.groupPageTest@784c3487]" started-at="2026-02-12T16:04:13 IST" name="loginWithValidCredentialsTest" description="User Login with Valid Credentials" data-provider="loginData" finished-at="2026-02-12T16:04:29 IST" duration-ms="15673" status="FAIL">
+        <test-method signature="loginWithValidCredentialsTest(java.lang.String,java.lang.String)[pri:0, instance:Test.groupPageTest@7966baa7]" started-at="2026-03-04T19:23:50 IST" name="loginWithValidCredentialsTest" description="User Login with Valid Credentials" data-provider="loginData" finished-at="2026-03-04T19:24:16 IST" duration-ms="26589" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[zygalvsaas007@gmail.com]]>
+                <![CDATA[zygal.test@gmail.com]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[Admin@0123]]>
+                <![CDATA[*1deeksha@Zygal007]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[invalid session id: session deleted as the browser has closed the connection
-from disconnected: not connected to DevTools
-  (Session info: chrome=144.0.7559.133)
-Build info: version: '4.29.0', revision: '5fc1ec94cb'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [48aa0bed0bea740119130f6b0ce4c400, findElement {value=//button[@id='submit_login_btn'], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56009}, goog:processID: 3912, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56009/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 48aa0bed0bea740119130f6b0ce4c400]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
-from disconnected: not connected to DevTools
-  (Session info: chrome=144.0.7559.133)
-Build info: version: '4.29.0', revision: '5fc1ec94cb'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [48aa0bed0bea740119130f6b0ce4c400, findElement {value=//button[@id='submit_login_btn'], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56009}, goog:processID: 3912, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56009/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 48aa0bed0bea740119130f6b0ce4c400
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy16.click(Unknown Source)
-at POM.LoginPage.loginApplication(LoginPage.java:137)
-at Test.groupPageTest.loginWithValidCredentialsTest(groupPageTest.java:16)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithValidCredentialsTest -->
-        <test-method signature="addGroups()[pri:0, instance:Test.groupPageTest@784c3487]" started-at="2026-02-12T16:04:29 IST" name="addGroups" description="Verify Add Groups Functionality" finished-at="2026-02-12T16:04:29 IST" depends-on-methods="Test.groupPageTest.loginWithValidCredentialsTest" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method Test.groupPageTest.addGroups() on instance Test.groupPageTest@784c3487 depends on not successfully finished methods 
-[Test.groupPageTest.loginWithValidCredentialsTest() on instance Test.groupPageTest@784c3487]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Test.groupPageTest.addGroups() on instance Test.groupPageTest@784c3487 depends on not successfully finished methods 
-[Test.groupPageTest.loginWithValidCredentialsTest() on instance Test.groupPageTest@784c3487]
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+        <test-method signature="addSingleGroupTest()[pri:0, instance:Test.groupPageTest@7966baa7]" started-at="2026-03-04T19:24:16 IST" name="addSingleGroupTest" description="Verify Add Single Group" finished-at="2026-03-04T19:24:24 IST" depends-on-methods="Test.groupPageTest.loginWithValidCredentialsTest" duration-ms="7771" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addGroups -->
+        </test-method> <!-- addSingleGroupTest -->
+        <test-method signature="deleteGroups()[pri:0, instance:Test.groupPageTest@7966baa7]" started-at="2026-03-04T19:24:24 IST" name="deleteGroups" description="Verify Group Delete" finished-at="2026-03-04T19:24:29 IST" depends-on-methods="Test.groupPageTest.addSingleGroupTest" duration-ms="4368" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteGroups -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Test.groupPageTest@7966baa7]" started-at="2026-03-04T19:24:29 IST" name="tearDown" finished-at="2026-03-04T19:24:29 IST" duration-ms="301" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- Test.groupPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

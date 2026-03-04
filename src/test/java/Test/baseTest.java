@@ -1,48 +1,38 @@
 package Test;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 
 import Utility.browserLaunch;
 import Utility.parameterization;
 
-  //Base class for setting up and tearing down tests (e.g., launching and closing browser).
-public class baseTest
-{
-	public static WebDriver driver;
+// Base class for setup and teardown
+public class baseTest {
 
-	@BeforeClass (alwaysRun=true)
-	public void setUp()
-	{
- driver = browserLaunch.openBrowser();
-	}
+    protected WebDriver driver;
 
-	@DataProvider(name="loginData")
-	public Object[][] loginData() throws Exception
-	{
-	    return new Object[][]
-	    {
-	        {
-	        	parameterization.getData("Sheet1", 0, 0),
-	        	parameterization.getData("Sheet1", 0, 1)
-	        }
-	    };
-	}
+    @BeforeClass(alwaysRun = true)
+    public void setUp() {
+        driver = browserLaunch.openBrowser();
+    }
 
-/*
-	public LoginPage launchApplication() throws IOException {
-		LoginPage loginPage = new LoginPage(driver);
-		driver = setUp();
-		return loginPage;
-	}
-*/
-/*	@AfterClass
-    public void tearDown()
-	{
+    @AfterClass(alwaysRun = true)
+    public void tearDown() {
         if (driver != null) {
-            driver.quit();  // ✅ ensures browser closes after each test
+            driver.quit();   // Ensures browser closes properly
         }
-    } */
+    }
 
+    @DataProvider(name = "loginData")
+    public Object[][] loginData() throws Exception {
+
+        return new Object[][]{
+                {
+                        parameterization.getData("Sheet1", 0, 0),
+                        parameterization.getData("Sheet1", 0, 1)
+                }
+        };
+    }
 }

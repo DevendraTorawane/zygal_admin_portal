@@ -6,8 +6,10 @@
       <class name="Test.groupPageTest">
         <methods>
           <include name="setUp"/>
-          <include name="loginWithValidCredentialsTest" invocation-numbers="0"/>
-          <include name="addGroups"/>
+          <include name="loginWithValidCredentialsTest"/>
+          <include name="deleteGroups"/>
+          <include name="tearDown"/>
+          <include name="addSingleGroupTest"/>
         </methods>
       </class> <!-- Test.groupPageTest -->
     </classes>
