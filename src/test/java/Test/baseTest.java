@@ -24,15 +24,28 @@ public class baseTest {
             driver.quit();   // Ensures browser closes properly
         }
     }
-
+/*
     @DataProvider(name = "loginData")
     public Object[][] loginData() throws Exception {
 
         return new Object[][]{
                 {
-                        parameterization.getData("Sheet1", 0, 0),
-                        parameterization.getData("Sheet1", 0, 1)
+                        parameterization.getData("Login", 0, 0),
+                        parameterization.getData("Login", 0, 1)
                 }
         };
-    }
+    } */
+    
+    @DataProvider(name = "loginData")
+    public Object[][] loginData() throws Exception {
+
+        return new Object[][]{
+                {
+                        parameterization.getData("data.xlsx","Login",1,0),
+
+                        parameterization.getData("data.xlsx","Login",1,1)
+                }
+        };
+    
+    } 
 }

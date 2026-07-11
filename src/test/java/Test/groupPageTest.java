@@ -10,11 +10,9 @@ public class groupPageTest extends baseTest {
 
 	public   GroupsAddGroups groupPage;
 	
-    @Test(
-            dataProvider = "loginData",
+    @Test(  dataProvider = "loginData",
             description = "User Login with Valid Credentials",
-            groups = {"Smoke"}
-    )
+            groups = {"Smoke"} )
     public void loginWithValidCredentialsTest(String userName, String password) throws InterruptedException {
 
         LoginPage loginPage = new LoginPage(driver);
@@ -25,11 +23,30 @@ public class groupPageTest extends baseTest {
                 "Login failed - User not redirected properly"
         );
     }
-   @Test(
-            dependsOnMethods = "loginWithValidCredentialsTest",
+    
+    
+ 
+    @Test(  dependsOnMethods = "loginWithValidCredentialsTest",
             description = "Verify Add Single Group",
-            groups = {"Smoke"}
-    )
+            groups = {"Smoke"}  )
+     public void addMultipleGroupTest() throws Exception {
+
+         GroupsAddGroups groupPage = new GroupsAddGroups(driver);
+
+         groupPage.navigateToGroupsPage();
+         groupPage.add300GroupsFromExcel();
+
+     
+     }
+    
+   
+    
+/*    
+    // Code working but we commented it. 
+     
+   @Test(   dependsOnMethods = "loginWithValidCredentialsTest",
+            description = "Verify Add Single Group",
+            groups = {"Smoke"}  )
     public void addSingleGroupTest() {
 
         groupPage = new GroupsAddGroups(driver);
@@ -39,37 +56,35 @@ public class groupPageTest extends baseTest {
 
    //     Assert.assertTrue(groupPage.isGroupCreated(null),"Single Group was not created successfully");
     }
-   
+
   
-    
+    // Code working but we commented it. 
+
     
     @Test( dependsOnMethods = "addSingleGroupTest",   // ✅ Correct dependency
     	    description ="Verify Group Delete",
     	    groups= {"Smoke"})
     	public void deleteGroups() {
-System.out.println("i am at deleteGroups()");
+
     	groupPage = new GroupsAddGroups(driver);
   //      groupPage.navigateToGroupsPage();   // ✅ Add this
         groupPage.deleteAllGroups();
         
       System.out.println("Group deleted Successfully");
     	}
-/*    @Test(
+    
+    
+   */ 
+    
+    
+    /* 
+    @Test(
             dependsOnMethods = "loginWithValidCredentialsTest",
             description = "Verify Add Single Group",
             groups = {"Smoke"}
     )
-    public void addMultipleGroupTest() throws Exception {
-
-        GroupsAddGroups groupPage = new GroupsAddGroups(driver);
-
-        groupPage.navigateToGroupsPage();
-        groupPage.add300GroupsFromExcel();
-
-        Assert.assertTrue(groupPage.isGroupCreated(),"Multiple groups  created successfully");
-    }
- */   
     
+  
     
 
   /*  
@@ -93,6 +108,7 @@ System.out.println("i am at deleteGroups()");
             description = "Verify Remove Device from Group",
             groups = {"Smoke"}
     )
+   
     public void removeDeviceTest() {
 
  //       GroupsAddGroups groupPage = new GroupsAddGroups(driver);

@@ -5,10 +5,14 @@ import org.testng.annotations.Test;
 
 import POM.LoginPage;
 import POM.ViewerPage;
+import Utility.parameterization;
 
 // Tests related to the viewer functionality.
 public class viewerPageTest extends baseTest
 {
+
+/*{
+	
 	@Test(dataProvider="loginData", description="User Login with Valid Credentials", groups={"positive"})
 	public void loginWithValidCredentialsTest(String userName, String password) throws Exception {
 
@@ -21,7 +25,69 @@ public class viewerPageTest extends baseTest
 	    ViewerPage viewerPage = new ViewerPage(driver);
 	    viewerPage.gotoAddViewer();
 
+	} */
 
-	}
+	// Tests related to the viewer functionality.
+	
+
+	    @Test(dataProvider = "loginData",
+	            description = "User Login with Valid Credentials",
+	            groups = { "positive" })
+
+	    public void loginWithValidCredentialsTest(
+	            String userName,
+	            String password) throws Exception {
+
+	        LoginPage zygalLoginPage =
+	                new LoginPage(driver);
+
+	        // Login
+	        zygalLoginPage.loginApplication(
+	                userName,
+	                password);
+
+	        // Verify Login
+	        Assert.assertTrue(
+	                zygalLoginPage.isLoginSuccessful(),
+	                "Login failed");
+
+	        // Create ViewerPage Object
+	        ViewerPage viewerPage =
+	                new ViewerPage(driver);
+
+	        // Open Add Viewer Page
+	        viewerPage.gotoAddViewer();
+
+	        // Get total rows from Excel
+	 
+	        int rows = parameterization.getRowCount("5000_unique_users.xlsx", "Users");
+
+	        for (int i = 1; i <= rows; i++) {
+
+	            String firstName =
+	                    parameterization.getData(
+	                            "Users", i, 0);
+
+	            String lastName =
+	                    parameterization.getData(
+	                            "Users", i, 1);
+
+	            String email =
+	                    parameterization.getData(
+	                            "Users", i, 2);
+
+	            String contact =
+	                    parameterization.getData(
+	                            "Users", i, 3);
+
+	            viewerPage.addViewer(
+	                    firstName,
+	                    lastName,
+	                    email,
+	                    contact);
+	        }
+	    }
+
+
 
 }
