@@ -37,7 +37,8 @@ public class baseTest {
     } */
     
     @DataProvider(name = "loginData")
-    public Object[][] loginData() throws Exception {
+    public Object[][] loginData() throws Exception 
+    {
 
         return new Object[][]{
                 {

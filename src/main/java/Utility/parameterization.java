@@ -40,7 +40,7 @@ return value;
 	}
 */
 
-	 public static String getData(String fileName,int row,int cell)
+	/* public static String getData(String fileName,int row,int cell)
 	            throws EncryptedDocumentException, IOException {
 
 	        String path =System.getProperty("user.dir")+ "/src/test/resources/"+ fileName;
@@ -60,7 +60,36 @@ return value;
 
 	        return value;
 	    }
+*/
+	
+	public static String getData(
+	        String fileName,
+	        String sheetName,
+	        int row,
+	        int cell)
+	        throws EncryptedDocumentException, IOException {
 
+	    String path = System.getProperty("user.dir")
+	            + "/src/test/resources/" + fileName;
+
+	    FileInputStream file = new FileInputStream(path);
+
+	    Workbook workbook = WorkbookFactory.create(file);
+
+	    DataFormatter formatter = new DataFormatter();
+
+	    String value = formatter.formatCellValue(
+	            workbook.getSheet(sheetName)
+	                    .getRow(row)
+	                    .getCell(cell));
+
+	    workbook.close();
+	    file.close();
+
+	    return value;
+	}
+	
+	
 	    public static int getRowCount(
 	            String fileName,
 	            String sheetname)
@@ -78,4 +107,7 @@ return value;
 	        file.close();
 
 	        return rowCount;
-	    }}
+	    }
+
+		
+}
