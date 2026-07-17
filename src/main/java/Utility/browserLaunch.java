@@ -18,7 +18,7 @@ public class browserLaunch {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver(options); // Pass options here
 
-		// Load URL
+		// Load URL --- 
 		String baseUrl = ConfigReader.getProperty("base_url");
 		driver.get(baseUrl);
 
