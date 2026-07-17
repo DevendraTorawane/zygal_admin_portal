@@ -54,7 +54,7 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>7.11.0</version>
-            <scope>test</scope>
+            <scope>compile</scope>
         </dependency>
 
         <!-- SLF4J API -->
